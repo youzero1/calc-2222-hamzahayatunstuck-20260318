@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 15, 15, 20;
+  --background-end-rgb: 25, 25, 35;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    135deg,
+    rgb(var(--background-start-rgb)) 0%,
+    rgb(var(--background-end-rgb)) 100%
+  );
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.calculator-btn {
+  @apply flex items-center justify-center rounded-2xl text-xl font-semibold transition-all duration-150 cursor-pointer select-none;
+  height: 72px;
+}
+
+.calculator-btn:active {
+  transform: scale(0.95);
+}
+
+.btn-number {
+  @apply bg-gray-700 hover:bg-gray-600 text-white;
+}
+
+.btn-operator {
+  @apply bg-orange-500 hover:bg-orange-400 text-white;
+}
+
+.btn-function {
+  @apply bg-gray-500 hover:bg-gray-400 text-white;
+}
+
+.btn-equals {
+  @apply bg-orange-500 hover:bg-orange-400 text-white;
+}
+
+.btn-zero {
+  @apply col-span-2;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
